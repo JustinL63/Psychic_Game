@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Word Guess Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+</head>
+
+<h1>Word Guess Game</h1>
+
+<body>
+    <script>
+
+        var foods = ["bacon", "steak", "tacos", "cheese", "donuts", "pizza"]
+
+        var randomChoice = Math.floor(Math.random() * foods.length);
+
+        var chosenWord = foods[randomChoice];
+
+        var dash =[];
+
+        linesForWord() 
+
+        for (let i = 0; i < chosenWord.length; i++) {
+            const element = foods [i];
+            dash.push("_");
+            
+        };
+        return.dash;
+        
+
+        console.log(linesForWord);
+
+    </script>
+</body>
+
+</html>
