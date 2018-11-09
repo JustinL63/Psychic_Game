@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="assests/css/style.css" />
-    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <script src="javascript/main.js"></script>
 </head>
 
 <body>
@@ -19,40 +19,8 @@
     <h3 id=wins>Wins</h3>
     <h4 id=losses>Losses</h4>
 
-    <script>
+    
 
-        var Alaphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "_"];
-
-        var guesses = 0;
-        var wins = 0;
-        var losses = 0;
-        var guessesLeft = 5;
-        var userGuess = [];
-
-        for (let i = 0; i < Alaphabet.length; i++) {
-            const element = Alaphabet[i];
-            randomLetter = Alaphabet[Math.floor(Math.random() * Alaphabet.length)];
-            
-
-        };
-
-        document.onkeyup = function (event) {
-            var userGuess = event.key.toLowerCase();
-        };
-
-        document.write(randomLetter);
-
-        // I need a way to keep Score
-        // I need a way to check and see if the guess from the user matches the random letter
-        if (userGuess === randomLetter) {
-            alert("You guessed right!  You must be psychic!")
-            wins++;
-
-
-        };
-
-
-    </script>
 </body>
 
 </html>
