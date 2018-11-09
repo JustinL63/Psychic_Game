@@ -1,47 +1,58 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assests/css/style.css" />
     <script src="main.js"></script>
 </head>
+
 <body>
+    <header>Psychic Game</header>
+
+    <h1>Guess the Right Letter</h1>
+    <h2 id=Guesses>Guesses</h2>
+    <h2 id=guessesleft>Guesses Left</h2>
+    <h3 id=wins>Wins</h3>
+    <h4 id=losses>Losses</h4>
+
     <script>
-        // Need a list of variables
-    var Alaphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "_"];
 
-    var guesses = 0;
-    var wins = 0;
-    var losses = 0;
-    var guessesLeft = 5;
+        var Alaphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "_"];
 
-    for (let i = 0; i < Alaphabet.length; i++) {
-        const element = Alaphabet[i];
-        randomLetter = Alaphabet[Math.floor(Math.random() * Alaphabet.length)];
-        
-    }
+        var guesses = 0;
+        var wins = 0;
+        var losses = 0;
+        var guessesLeft = 5;
+        var userGuess = [];
 
+        for (let i = 0; i < Alaphabet.length; i++) {
+            const element = Alaphabet[i];
+            randomLetter = Alaphabet[Math.floor(Math.random() * Alaphabet.length)];
+            
 
-    console.log(randomLetter);
+        };
+
+        document.onkeyup = function (event) {
+            var userGuess = event.key.toLowerCase();
+        };
+
+        document.write(randomLetter);
 
         // I need a way to keep Score
         // I need a way to check and see if the guess from the user matches the random letter
-        // 
-        
-        
-        
-        
-        
-        
-        
-        
+        if (userGuess === randomLetter) {
+            alert("You guessed right!  You must be psychic!")
+            wins++;
 
 
+        };
 
 
-        </script>
+    </script>
 </body>
+
 </html>
